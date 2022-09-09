@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="img/encriptado1.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Challenger 1 - ONE & Alura | Encriptador de texto</title>
+  </head>
+  <body>
+    <script>
+      /*
+
+        La letra "e" es convertida para "enter"
+        La letra "i" es convertida para "imes"
+        La letra "a" es convertida para "ai"
+        La letra "o" es convertida para "ober"
+        La letra "u" es convertida para "ufat"
+
+      - Debe funcionar solo con letras minúsculas
+      - No deben ser utilizados letras con acentos ni caracteres especiales
+      - Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
+
+      */
+
+      const encriptar = () => {
+        let texto = document.getElementById("inputTexto").value;
+        texto = texto.toLowerCase();
+
+        let texCifrado = texto.replace(/e/gim, "enter");
+        texCifrado = texCifrado.replace(/o/gim, "ober");
+        texCifrado = texCifrado.replace(/i/gim, "imes");
+        texCifrado = texCifrado.replace(/a/gim, "ai");
+        texCifrado = texCifrado.replace(/u/gim, "ufat");
+        console.log(texCifrado);
+
+        document.getElementById("muneco").style.display = "none";
+        document.getElementById("texto").style.display = "none";
+        document.getElementById("texto2").innerHTML = texCifrado;
+        document.getElementById("copy").style.display = "show";
+        document.getElementById("copy").style.display = "inherit";
+      };
+      const desencriptar = () => {
+        let texto = document.getElementById("inputTexto").value;
+        texto = texto.toLowerCase();
+
+        let texCifrado = texto.replace(/enter/gim, "e");
+        texCifrado = texCifrado.replace(/ober/gim, "o");
+        texCifrado = texCifrado.replace(/imes/gim, "i");
+        texCifrado = texCifrado.replace(/ai/gim, "a");
+        texCifrado = texCifrado.replace(/ufat/gim, "u");
+
+        document.getElementById("muneco").style.display = "none";
+        document.getElementById("texto").style.display = "none";
+        document.getElementById("texto2").innerHTML = texCifrado;
+        document.getElementById("copy").style.display = "show";
+        document.getElementById("copy").style.display = "inherit";
+      };
+
+      const copy = () => {
+        let texto = document.getElementById("texto2");
+        texto.select();
+        document.execCommand("copy");
+        alert("Se copio el texto");
+      };
+    </script>
+    <div class="container">
+      <div>
+        <h1 class="title">Encriptador de texto | ONE & Alura</h1>
+        <img class="logo" src="img/Logo-Alura.PNG" alt="Logo-Alura" />
+      </div>
+      <div class="left">
+        <input
+          class="input-text"
+          type="text"
+          id="inputTexto"
+          placeholder="Ingrese el texto aquí"
+        />
+      </div>
+      <div class="right">
+        <img id="muneco" src="img/muneco.png" alt="muneco" />
+        <h1 id="texto">Ningun mensaje fue encontrado</h1>
+        <textarea
+          id="texto2"
+          name="name"
+          rows="8"
+          cols="80"
+          placeholder="No se proceso ningun texto"
+        ></textarea>
+        <button name="button" type="button" id="copy" onclick="copy()">
+          copiar
+        </button>
+      </div>
+      <div class="left-button">
+        <p>Solo letras minusculas y sin acento</p>
+        <button type="button" id="encriptar" onclick="encriptar()">
+          Encriptar
+        </button>
+        <button type="button" id="desenciptar" onclick="desencriptar()">
+          Desenciptar
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

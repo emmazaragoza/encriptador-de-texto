@@ -1,0 +1,123 @@
+body{
+    margin:0px;
+    padding: 0px;
+    background-color: #F3F5FC;
+}
+.container{
+    margin: auto;
+    width: 960px;
+    height: 650px;
+    padding: 5px;
+    background-color: #F3F5FC;
+}
+.logo{
+    width: 31px;
+    height: 45px;
+    margin-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    float:inline-start;
+}
+.left{
+    margin-right: 1px;
+    float: left;
+    width: 69%;
+    height: 50%;
+    margin-bottom: 2%;
+    border-radius: 24px;
+    background-color: #ffffff;
+}
+.right{
+    float: right;
+    width: 30%;
+    height: 86%;
+    border-radius: 24px;
+    background-color: #ffffff    ;
+}
+.title{
+    float: right;
+    margin-left: 15%;
+    width: 52%;
+    font-family:monospace;
+  }
+.left-button{
+    margin-right: 1px;
+    float: left;
+    width: 69%;
+    height: auto;
+    border-radius: 24px;
+    background-color: #ffffff;
+}
+.input-text{
+    padding-right: 15%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 2%;
+    border-radius: 24px;
+    width: 80%;
+    height: 90%;
+    color: #0A3871;
+    font-size: 32px;
+    border: none;
+    outline: none;
+    background-color: #e3e7f8;
+}
+#muneco{
+    margin-left: 2%;
+    margin-top: 20%;
+    width: 90%;
+    height: auto;
+}
+#texto{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#texto2{
+    float: left;
+    margin-left: 10%;
+    width: 80%;
+    height: 10%;
+    color: #0A3871;
+    font-size: 20px;
+    border: none;
+    outline: none; 
+}
+
+#encriptar{
+    width: 20%;
+    border-radius: 24px;
+    margin-left: 15%;
+    background-color: #0A3871;
+    color: #e3e7f8;
+    font-size: medium;
+    padding-left: 24px;
+    padding-right: 80px;
+    padding-top: 22px;
+    padding-bottom: 29px;
+    height: 62px;
+    border-top-width: 2px
+}
+#desenciptar{
+    width: 20%;
+    border-radius: 24px;
+    margin-left: 15%;
+    background-color: #ffffff;
+    color: #0A3871;
+    font-size: medium;
+    padding-left: 24px;
+    padding-right: 80px;
+    padding-top: 22px;
+    padding-bottom: 29px;
+    height: 62px;
+    border-top-width: 2px
+}
+#copy{
+    margin-left: 33%;
+    margin-top: 90%;
+    padding: 24px;
+    width: 40%;
+    height: 10%;
+    background-color:#FFFFFF;
+    border-radius: 24px;
+    display: none;
+}
