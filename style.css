@@ -4,6 +4,7 @@ body{
     background-color: #F3F5FC;
 }
 .container{
+    display:column;
     margin: auto;
     width: 960px;
     height: 650px;
